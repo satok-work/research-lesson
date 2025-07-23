@@ -1,0 +1,45 @@
+body {
+    background-color: #f8f8ff;
+}
+
+h1 {
+    color: #fa8072;
+    text-align: center;
+    background-color: #fff8dc;
+    margin-top: 5px;
+    padding: 10px;
+}
+
+h2 {
+    color: #228b22;
+    background: #90ee90;
+    padding: 2px;
+}
+
+.reference {
+    color: #22228b;
+    background-color: #6495ed;
+    margin-top: 50px;
+}
+
+table {
+    border-style: solid;
+    border-collapse: collapse;
+    border-width: 6px ;
+}
+
+th {
+    background-color: #ffff99;
+    border-style: solid;
+    padding: 10px;
+    text-align: center;
+}
+
+td {
+    padding: 10px 40px;
+    border-style: solid;
+}
+
+ul {
+    list-style-type: square ;
+}
