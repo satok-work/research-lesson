@@ -1,146 +1,147 @@
-/* Interフォントを全体に適用し、基本的なマージンとパディングをリセットします。 */
+@charset "UTF-8";
 body {
-    font-family: 'Inter', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f7f6; /* 少しグレーがかった背景色 */
-    color: #333; /* 文字の色 */
-    line-height: 1.6; /* 行の高さ */
+	margin: 0;
+	padding: 0;
+	line-height: 1.6;
+	background: #fff;
+	background-size: 40px 40px;
 }
-
-/* ページ全体のコンテンツを中央に配置し、幅を制限します。 */
-.container {
-    max-width: 960px; /* 最大幅 */
-    margin: 30px auto; /* 上下に30px、左右は自動で中央寄せ */
-    background-color: #ffffff; /* コンテンツ部分の背景色を白に */
-    padding: 40px; /* 内側の余白 */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* 影をつけて立体感を出す */
-    border-radius: 12px; /* 角を丸くする */
+#outer {
+	margin: 0 auto;
+	width: 1000px;
+	background-color: #fff;
 }
-
-/* ヘッダー部分のスタイル */
-.header {
-    text-align: center; /* ヘッダー内のテキストを中央寄せ */
-    margin-bottom: 40px; /* 下に余白 */
-    padding-bottom: 20px; /* 下にパディング */
-    border-bottom: 2px solid #e0e0e0; /* 下線 */
+header {
+	height: 80px;
+	padding: 20px 30px;
 }
-
-.header .date {
-    font-size: 0.9em; /* 日付の文字サイズ */
-    color: #666; /* 日付の文字色 */
-    margin-bottom: 10px;
+.header-inner {
+	padding: 0;
+	font-size: 12px;
 }
-
-.header h1 {
-    font-size: 2.8em; /* タイトルの文字サイズ */
-    color: #2c3e50; /* タイトルの文字色 */
-    margin-bottom: 15px;
-    font-weight: 700; /* 太字 */
+h1 {
+	font-size: 24px;
+	margin: 0;
+	padding: 0;
 }
-
-.header .student-info {
-    font-size: 1.1em; /* 生徒情報の文字サイズ */
-    color: #555; /* 生徒情報の文字色 */
-    margin-bottom: 20px;
+h1 a {
+	color: #000;
+	text-decoration: none;
 }
-
-/* ヘッダー画像のスタイル */
-.header-image {
-    max-width: 100%; /* 親要素の幅に合わせて画像を調整 */
-    height: auto; /* 高さは自動調整 */
-    border-radius: 8px; /* 画像の角を丸くする */
-    margin-top: 20px; /* 上に余白 */
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* 画像に影 */
+h1 a:hover {
+	text-decoration: underline;
 }
-
-/* メインコンテンツ部分のスタイル */
-.main-content {
-    padding-top: 20px;
+h2 {
+	font-size: 22px;
+	margin: 0;
+	padding: 10px;
+	background-color: #D6E7EE;
 }
-
-/* 各セクションのスタイル */
-.section {
-    margin-bottom: 30px; /* 各セクションの下に余白 */
-    padding: 25px; /* 内側の余白 */
-    background-color: #fdfdfd; /* セクションの背景色 */
-    border-left: 5px solid #3498db; /* 左側にアクセントライン */
-    border-radius: 8px; /* 角を丸くする */
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05); /* 影 */
+h2 a {
+	text-decoration: none;
+	color: #265699;
 }
-
-.section h2 {
-    font-size: 1.8em; /* セクションタイトルの文字サイズ */
-    color: #34495e; /* セクションタイトルの文字色 */
-    margin-bottom: 15px;
-    border-bottom: 1px dashed #ccc; /* 下に点線 */
-    padding-bottom: 10px;
+p {
+	margin: 1em 0;
 }
-
-.section h3 {
-    font-size: 1.4em; /* サブタイトルの文字サイズ */
-    color: #2980b9; /* サブタイトルの文字色 */
-    margin-top: 25px;
-    margin-bottom: 10px;
+.aka {
+	color: #B0231D;
+	font-weight: bold;
 }
-
-.section p {
-    margin-bottom: 1em; /* 段落の下に余白 */
-    text-align: justify; /* 両端揃え */
+img {
+	max-width: 100%;
+	height: auto;
+	border: 0;
 }
-
-/* リンクのスタイル（もしあれば） */
 a {
-    color: #3498db;
-    text-decoration: none;
+	color: #094a94;
 }
-
-a:hover {
-    text-decoration: underline;
+#content {
+	padding: 0 20px;
 }
-
-/* レスポンシブデザインのためのメディアクエリ */
-/* 画面幅が768px以下の場合に適用されるスタイル */
-@media (max-width: 768px) {
-    .container {
-        margin: 20px auto;
-        padding: 20px;
-    }
-
-    .header h1 {
-        font-size: 2em; /* 小さい画面ではタイトルを小さく */
-    }
-
-    .section h2 {
-        font-size: 1.5em; /* 小さい画面ではセクションタイトルを小さく */
-    }
-
-    .section h3 {
-        font-size: 1.2em; /* 小さい画面ではサブタイトルを小さく */
-    }
+#content::after {
+	content: "";
+	display: table;
+	clear: both;
 }
-
-/* 画面幅が480px以下の場合に適用されるスタイル */
-@media (max-width: 480px) {
-    .container {
-        margin: 10px auto;
-        padding: 15px;
-    }
-
-    .header h1 {
-        font-size: 1.8em;
-    }
-
-    .section {
-        padding: 15px;
-    }
+.inner {
+	float: right;
+	width: 640px;
+	margin: 0;
+	padding: 10px 20px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
-
-td {
-    padding: 10px 40px;
-    border-style: solid;
+aside {
+	padding: 20px;
+	color: #676767;
+	width: 220px;
+	float: left;
+	background-color: #f8f8f8;
 }
-
+.left-title {
+	padding: 10px;
+	font-weight: bold;
+	color: #333;
+}
+.link {
+	margin: 0;
+	padding: 0 0 10px 0;
+}
+.link a {
+	color: #094a94;
+	text-decoration: none;
+}
+.link a:hover {
+	text-decoration: underline;
+}
 ul {
-    list-style-type: square ;
+	margin: 0 0 0 1em;
+	padding: 0;
+}
+.link li {
+	list-style: none;
+	padding: 4px 0;
+}
+footer {
+	text-align: center;
+	color: #666;
+	font-size: 15px;
+	height: 100px;
+	padding-top: 40px;
+	clear: both;
+}
+blockquote {
+	border: 1px solid #ccc;
+	padding: 5px;
+	margin: 10px;
+}
+@media (max-width: 768px) {
+#outer {
+	width: 100%;
+	padding: 0;
+}
+#content {
+	padding: 0 10px;
+}
+.inner, aside {
+	float: none;
+	width: 100%;
+}
+.inner {
+	margin: 0;
+	padding: 10px 0;
+	box-shadow: none;
+}
+aside {
+	padding: 10px 0;
+}
+.header-inner {
+	font-size: 10px;
+}
+h1 {
+	font-size: 20px;
+}
+h2 {
+	font-size: 20px;
+}
 }
